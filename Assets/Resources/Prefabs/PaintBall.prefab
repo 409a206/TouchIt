@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2198898715158468304}
   - component: {fileID: 2198898715158468305}
   - component: {fileID: 2198898715158468306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PaintBall
   m_TagString: PaintBall
   m_Icon: {fileID: 0}

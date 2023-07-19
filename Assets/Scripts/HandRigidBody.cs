@@ -12,7 +12,7 @@ public class HandRigidBody : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Physics.IgnoreCollision(XROrigin.GetComponent<CharacterController>(), this.GetComponent<Collider>());
+        //Physics.IgnoreCollision(XROrigin.GetComponent<CharacterController>(), this.GetComponent<Collider>());
         _rigid = this.GetComponent<Rigidbody>();
     }
 
