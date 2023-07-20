@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 117669530}
   m_Layer: 7
   m_Name: HandRigidBody
-  m_TagString: Untagged
+  m_TagString: HandRigidBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1859,6 +1859,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 92175652}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &640429204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4511655667520406305, guid: 087e2a9d318d8b842b11b221d1f79534,
+    type: 3}
+  m_PrefabInstance: {fileID: 2116229644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &640429210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640429204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52f306d79980d245b1000cd537a84ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 0.268
+  duration: 0.1
 --- !u!1001 &657342022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4620,7 +4640,7 @@ GameObject:
   - component: {fileID: 1521767304}
   m_Layer: 7
   m_Name: HandRigidBody
-  m_TagString: Untagged
+  m_TagString: HandRigidBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

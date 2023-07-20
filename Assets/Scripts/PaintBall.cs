@@ -26,9 +26,17 @@ public class PaintBall : MonoBehaviour
 
    private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Paintable") {
-            lastTouchPos = this.transform.position;
             CalculatePaintRadius();
             StartCoroutine(DestroySphereCoroutine());
+        } else if(other.gameObject.tag == "HandRigidBody") {
+          lastTouchPos = this.transform.position;
+          Debug.Log("Hit with hand");
+        } else if(other.gameObject.tag == "Bullet") {
+          lastTouchPos = this.transform.position;
+          Debug.Log("Hit with Bullet");
+        } else if(other.gameObject.tag =="PaintBall") {
+          lastTouchPos = this.transform.position;
+          Debug.Log("Hit with PaintBall");
         }
    }
 

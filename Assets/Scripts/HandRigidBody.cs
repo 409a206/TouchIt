@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandRigidBody : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class HandRigidBody : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //Physics.IgnoreCollision(XROrigin.GetComponent<CharacterController>(), this.GetComponent<Collider>());
         _rigid = this.GetComponent<Rigidbody>();
     }
 
@@ -21,6 +21,8 @@ public class HandRigidBody : MonoBehaviour
             Vector3 contactPos = other.contacts[0].point;
             Vector3 contactDir =  (other.transform.position - contactPos).normalized;
             other.rigidbody.AddForce(contactDir * handTouchPower, ForceMode.Force);
+
+            this.GetComponentInParent<XRBaseControllerInteractor>().xrController.SendHapticImpulse(0.7f,0.5f);
             // Debug.Log("sef");
         }
     }

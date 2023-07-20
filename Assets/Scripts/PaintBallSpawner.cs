@@ -8,6 +8,7 @@ public class PaintBallSpawner : MonoBehaviour
     private Vector3[] paintBallOriginPoses;
     private Color[] paintBallColors;
     private bool isSpawning = false;
+    private float lerpTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,28 +23,45 @@ public class PaintBallSpawner : MonoBehaviour
     }
 
     private void Update() {
-        TrySpawnPaintBalls();
+         TrySpawnPaintBalls();
     }
-    public void TrySpawnPaintBalls() {
-       
+
+    private void TrySpawnPaintBalls() {
         if(transform.childCount == 0 && !isSpawning) {
+            StartCoroutine(SpawnPaintBallsCoroutine());
             isSpawning = true;
-            StartCoroutine(SpawnPaintBallCoroutine());
         }
     }
 
-    private IEnumerator SpawnPaintBallCoroutine()
+    private IEnumerator SpawnPaintBallsCoroutine()
     {
-        Debug.Log("Starting SpawnPaintBallCoroutine");
         yield return new WaitForSeconds(3f);
+        Debug.Log("SpawnPaintBallCoroutine Called");
         
         for (int i = 0; i < paintBallOriginPoses.Length; i++)
         {
             GameObject paintBall = Instantiate<GameObject>(Resources.Load("Prefabs/PaintBall") as GameObject);
             paintBall.transform.position = paintBallOriginPoses[i];
             paintBall.GetComponent<PaintBall>().SetPaintColor(paintBallColors[i]);
+            paintBall.transform.SetParent(this.transform);
+            StartCoroutine(PaintBallDissolveInCoroutine(paintBall));
         }
-        yield return new WaitForSeconds(3f); 
         isSpawning = false;
+    }
+
+    //dissolve 관련 로직 실행
+    private IEnumerator PaintBallDissolveInCoroutine(GameObject paintBall)
+    {
+            float elapsedTime = 0f;
+            while(elapsedTime < lerpTime) {
+            elapsedTime += Time.deltaTime;
+
+            if(elapsedTime >= lerpTime) {
+                elapsedTime = lerpTime;
+            }
+
+            paintBall.GetComponent<Renderer>().material.SetFloat("_Alpha_Clip_Threshold", Mathf.Lerp(1f,0f, elapsedTime/lerpTime));
+            yield return null;
+            }
     }
 }
