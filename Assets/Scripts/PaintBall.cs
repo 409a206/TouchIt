@@ -15,6 +15,9 @@ public class PaintBall : MonoBehaviour
     //paint radius 적용 상수
     private float paintRadiusAdjustmentConstant = 1f;
 
+    //dissolve shader 관련 변수
+    float lerpTime = 1f;
+
     private void Awake() {
         _rigidBody = this.GetComponent<Rigidbody>();
         SetPaintColor(color);
@@ -35,8 +38,21 @@ public class PaintBall : MonoBehaviour
    }
 
    IEnumerator DestroySphereCoroutine() {
-        yield return new WaitForSeconds(0.03f);
-        Destroy(this.gameObject);
+     float elapsedTime = 0f;
+     _rigidBody.velocity = Vector3.zero;
+     _rigidBody.angularVelocity = Vector3.zero;
+     this.GetComponent<Collider>().enabled = false;
+     while(elapsedTime < lerpTime) {
+          elapsedTime += Time.deltaTime;
+
+          if(elapsedTime >= lerpTime) {
+               elapsedTime = lerpTime;
+          }
+
+          this.gameObject.GetComponent<Renderer>().material.SetFloat("_Alpha_Clip_Threshold", Mathf.Lerp(0f,1f, elapsedTime/lerpTime));
+          yield return null;
+     }
+      Destroy(this.gameObject);
    }
 
    public void SetPaintColor(Color color) {
