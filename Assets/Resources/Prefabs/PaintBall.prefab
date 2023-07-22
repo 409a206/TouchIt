@@ -140,7 +140,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   preview: 0
   threshold: 50
-  pressureMode: 1
+  pressureMode: 0
   pressureMin: 1
   pressureMax: 100
   pressureConstant: 1
@@ -174,15 +174,15 @@ MonoBehaviour:
     Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  texture: {fileID: 2800000, guid: eb2c4ecdfbcb4bd4eb3057da4db6fa5a, type: 3}
+  texture: {fileID: 2800000, guid: 8125cf028780b1745a79880b9ba6a989, type: 3}
   shape: {fileID: 0}
   shapeChannel: 3
-  color: {r: 1, g: 0.07075471, b: 0.07075471, a: 1}
+  color: {r: 0, g: 1, b: 0.11251116, a: 1}
   opacity: 1
   angle: 0
-  scale: {x: 10, y: 10, z: 10}
-  radius: 0.1
-  hardness: 3
+  scale: {x: 1, y: 1, z: 0.5}
+  radius: 0.5
+  hardness: 52.09
   wrapping: 1
   normalFront: 1
   normalBack: 0
@@ -208,4 +208,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d44d0a61d122674abb6ee23c1a7b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.18431373, g: 0.9804163, b: 1, a: 1}
+  color: {r: 0.2310111, g: 1, b: 0.18431371, a: 1}

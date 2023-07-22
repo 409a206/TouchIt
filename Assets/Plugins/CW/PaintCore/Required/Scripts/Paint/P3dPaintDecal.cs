@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using CW.Common;
+using System;
 
 namespace PaintIn3D
 {
@@ -84,6 +85,18 @@ namespace PaintIn3D
 
 		/// <summary>This stores a list of all modifiers used to change the way this component applies paint (e.g. <b>P3dModifyColorRandom</b>).</summary>
 		public P3dModifierList Modifiers { get { if (modifiers == null) modifiers = new P3dModifierList(); return modifiers; } } [SerializeField] private P3dModifierList modifiers;
+
+		private Vector3 originPos;
+		// [SerializeField]
+		private float maxRadius = 1.3f;
+		private float minRadius = 0.7f;
+		private float maxDist = 5f;
+		private float minDist = 0.2f;
+
+		private void Start() {
+			originPos = this.transform.position;
+			//Debug.Log(originPos);
+		}
 
 		/// <summary>This method will invert the scale.x value.</summary>
 		[ContextMenu("Flip Horizontal")]
@@ -232,13 +245,16 @@ namespace PaintIn3D
 		private Vector3 HandleHitCommon(bool preview, float pressure, int seed, Quaternion rotation)
 		{
 			var finalOpacity  = opacity;
-			var finalRadius   = radius;
+			var finalRadius   = CalculatePaintRadius(originPos, this.transform.position);
 			var finalScale    = scale;
 			var finalHardness = hardness;
 			var finalColor    = color;
 			var finalAngle    = angle;
 			var finalTexture  = texture;
 			var finalMatrix   = tileTransform != null ? tileTransform.localToWorldMatrix : Matrix4x4.identity;
+
+			Debug.Log("finalAngle: " + finalAngle);
+			Debug.Log("finalHardness: " + finalHardness);
 
 			if (modifiers != null && modifiers.Count > 0)
 			{
@@ -263,7 +279,26 @@ namespace PaintIn3D
 			return finalSize;
 		}
 
-		private void HandleMaskCommon(Vector3 worldPosition)
+        private float CalculatePaintRadius(Vector3 originPos, Vector3 collisionPos)
+        {
+			//Debug.Log("Calculate Paint Radius called");
+			//Debug.Log("collision pos: " + collisionPos);
+			float distance = Vector3.Distance(originPos, collisionPos);
+			//Debug.Log("dist: " + distance);
+			float appliedRadius = minRadius;
+			if(distance >= maxDist) distance = maxDist;
+			if(distance <= minDist) distance = minDist;
+
+			float delta = (minRadius - maxRadius) / (maxDist - minDist);
+			float intercept = (-delta * minDist) + maxRadius;
+			appliedRadius = distance * delta + intercept;
+
+			Debug.Log("appliedRadius: "+ appliedRadius);
+
+            return appliedRadius;
+        }
+
+        private void HandleMaskCommon(Vector3 worldPosition)
 		{
 			var mask = P3dMask.Find(worldPosition, layers);
 
