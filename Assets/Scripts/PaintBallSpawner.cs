@@ -60,7 +60,7 @@ public class PaintBallSpawner : MonoBehaviour
                 elapsedTime = lerpTime;
             }
 
-            paintBall.GetComponent<Renderer>().material.SetFloat("_Alpha_Clip_Threshold", Mathf.Lerp(1f,0f, elapsedTime/lerpTime));
+            paintBall?.GetComponent<Renderer>().material.SetFloat("_Alpha_Clip_Threshold", Mathf.Lerp(1f,0f, elapsedTime/lerpTime));
             yield return null;
             }
     }
