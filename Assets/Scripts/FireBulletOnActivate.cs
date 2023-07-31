@@ -9,7 +9,8 @@ public class FireBulletOnActivate : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20f;
-    private RaycastHit hitInfo;
+    private RaycastHit hit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +24,15 @@ public class FireBulletOnActivate : MonoBehaviour
     private void DetectPaintBallOnAim()
     {
         if(GetComponent<XRGrabInteractable>().isSelected) {
-            if(Physics.Raycast(spawnPoint.position, spawnPoint.forward, out hitInfo)) {
+            // Debug.DrawRay(spawnPoint.position, spawnPoint.forward * 10f, Color.red);
+            if(Physics.Raycast(spawnPoint.position, spawnPoint.forward, out RaycastHit hitInfo)) {
                 if(hitInfo.transform.tag == "PaintBall") {
+                    hit = hitInfo;
                     Debug.Log("Raycasted to " + hitInfo.transform.name);
-                    Destroy(hitInfo.transform.gameObject);
-                }
-            }
+                    hitInfo.transform.gameObject.GetComponent<Renderer>().material.SetInt("_isAimedAt", 1);
+                    //Destroy(hitInfo.transform.gameObject);
+                } 
+            } 
         }
     }
 

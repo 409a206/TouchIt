@@ -9,8 +9,9 @@ public class PaintBall : MonoBehaviour
     private Rigidbody _rigidBody;
 
 
-    //dissolve shader 관련 변수
+    //shader 관련 변수
     float lerpTime = 1f;
+    public bool isRayCastedAt = false;
 
     private void Awake() {
         _rigidBody = this.GetComponent<Rigidbody>();
