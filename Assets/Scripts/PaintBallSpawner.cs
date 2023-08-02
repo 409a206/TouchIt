@@ -37,7 +37,7 @@ public class PaintBallSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Debug.Log("SpawnPaintBallCoroutine Called");
-        
+        this.GetComponent<AudioSource>().PlayOneShot(FindObjectOfType<SoundManager>().effectSounds[2].clip);
         for (int i = 0; i < paintBallOriginPoses.Length; i++)
         {
             GameObject paintBall = Instantiate<GameObject>(Resources.Load("Prefabs/PaintBall") as GameObject);
