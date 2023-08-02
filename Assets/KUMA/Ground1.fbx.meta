@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: b616314b9f084494facac50bec47e3a1
+guid: 8445790ddf914fd46bd12a5cd2c1b79e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NewKUMA1-1.1001
-    second: {fileID: 2100000, guid: 62d033849e2bdbb489af3886ea141b76, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NewKUMA1-1.1002
-    second: {fileID: 2100000, guid: 7e506b5ecf638c241bd6a76d0c154e52, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NewKUMA1-1.1003
-    second: {fileID: 2100000, guid: 58c2766c54327e843966db103f2a766c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NewKUMA1-1.1004
-    second: {fileID: 2100000, guid: 1f5800173c2266145b622cfc26271006, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,10 +32,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 188
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -108,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1.88
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
