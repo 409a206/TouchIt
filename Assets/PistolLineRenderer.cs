@@ -11,7 +11,7 @@ public class PistolLineRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        this.GetComponent<LineRenderer>().SetPosition(1, bulletSpawnPoint.transform.forward.normalized);
+        //this.GetComponent<LineRenderer>().SetPosition(1, bulletSpawnPoint.transform.forward.normalized);
     }
 
     // Update is called once per frame
