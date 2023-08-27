@@ -8,10 +8,13 @@ public class GameMenuManager : MonoBehaviour
 {
     public GameObject menu;
     public GameObject finishCanvas;
+    public GameManager gameManager;
     public InputActionProperty showButton;
     public Transform head;
     public float spawnDistance = 2f;
     public GameObject PaintBallSpawner;
+
+    private bool isClearCanvasShowing = false;
     
     // Update is called once per frame
     void Update()
@@ -24,12 +27,17 @@ public class GameMenuManager : MonoBehaviour
         menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y,head.position.z));
         menu.transform.forward *= -1;
 
-        TryShowClearCanvas();
+        //---------------------------------------------
+        if(!isClearCanvasShowing) {
+            TryShowClearCanvas();
+        }
     }
 
     private void TryShowClearCanvas()
     {
         if(PaintBallSpawner.transform.childCount == 0) {
+            gameManager.soundManager?.PlaySE("snd_gameClear");
+            isClearCanvasShowing = true;
             finishCanvas.SetActive(true);
             finishCanvas.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
             finishCanvas.transform.LookAt(new Vector3(head.position.x, finishCanvas.transform.position.y,head.position.z));
