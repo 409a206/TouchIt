@@ -39,6 +39,7 @@ public class PaintBall : MonoBehaviour
                     Debug.Log("Raycasted to " + hitInfo.transform.name);
                     this.GetComponent<Renderer>().material.SetInt("_isAimedAt", 1);
                     if(!_isAimSoundPlayed) {
+                      _audioSource.volume = 0.3f;
                       _audioSource.PlayOneShot(soundManager.effectSounds[12].clip);
                       _isAimSoundPlayed = true;
                     }
@@ -68,6 +69,7 @@ public class PaintBall : MonoBehaviour
 
    IEnumerator DestroySphereCoroutine() {
      //float elapsedTime = 0f;
+     _audioSource.volume = 1.0f;
      _audioSource.PlayOneShot(soundManager.effectSounds[1].clip);
      _rigidBody.velocity = Vector3.zero;
      _rigidBody.angularVelocity = Vector3.zero;

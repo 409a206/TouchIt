@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.InputSystem;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public ActionBasedSnapTurnProvider snapTurn;
     public ActionBasedContinuousTurnProvider continuousTurn;
+    public InputActionProperty resetButton;
 
     public void SetTurnTypeFromIndex(int index) {
         if(index == 0) {
@@ -41,6 +44,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TryResetScene();
+    }
+
+    private void TryResetScene()
+    {
+        if(resetButton.action.WasPressedThisFrame()) {
+            ResetCurrentScene();
+        }
     }
 }

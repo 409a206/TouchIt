@@ -28,8 +28,9 @@ public class PaintBallSpawner : MonoBehaviour
 
     private void TrySpawnPaintBalls() {
         if(transform.childCount == 0 && !isSpawning) {
-            StartCoroutine(SpawnPaintBallsCoroutine());
-            isSpawning = true;
+            //StartCoroutine(SpawnPaintBallsCoroutine());
+            //isSpawning = true;
+            
         }
     }
 

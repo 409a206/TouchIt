@@ -117,7 +117,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2198898715158468304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d44d0a61d122674abb6ee23c1a7b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.2310111, g: 1, b: 0.18431371, a: 1}
+  color: {r: 0.18431371, g: 0.41428635, b: 1, a: 1}
   bulletSpawnPoint: {fileID: 0}
 --- !u!82 &8155975812536648668
 AudioSource:
