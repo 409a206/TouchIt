@@ -39,8 +39,11 @@ public class PaintBall : MonoBehaviour
                     Debug.Log("Raycasted to " + hitInfo.transform.name);
                     this.GetComponent<Renderer>().material.SetInt("_isAimedAt", 1);
                     if(!_isAimSoundPlayed) {
-                      _audioSource.volume = 0.3f;
-                      _audioSource.PlayOneShot(soundManager.effectSounds[12].clip);
+                      
+                      //play aim sound
+                      // _audioSource.volume = 0.3f;
+                      // _audioSource.PlayOneShot(soundManager.effectSounds[12].clip);
+                      
                       _isAimSoundPlayed = true;
                     }
                     //Destroy(hitInfo.transform.gameObject); 

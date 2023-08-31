@@ -183,7 +183,7 @@ MonoBehaviour:
   angle: 0
   scale: {x: 1, y: 1, z: 0.5}
   radius: 0.5
-  hardness: 52.09
+  hardness: 10
   wrapping: 1
   normalFront: 1
   normalBack: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d44d0a61d122674abb6ee23c1a7b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.18431371, g: 0.41428635, b: 1, a: 1}
+  color: {r: 0.3647059, g: 0.7529412, b: 0.7372549, a: 1}
   bulletSpawnPoint: {fileID: 0}
 --- !u!82 &8155975812536648668
 AudioSource:

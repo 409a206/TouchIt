@@ -1933,6 +1933,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468305, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: shape
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
         type: 3}
       propertyPath: color.b
@@ -2065,7 +2070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86563939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320.244, y: 130.363, z: -225.266}
+  m_LocalPosition: {x: 319.5, y: 130.363, z: -225.74}
   m_LocalScale: {x: 2, y: 0.01, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7413,7 +7418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516182767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.03, y: 0, z: -0.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11346,11 +11351,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaintBall (207)
       objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468264, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2198898715158468268, guid: 54c9e54b20a716c4481de9c5c8ec8580,
         type: 3}
       propertyPath: m_RootOrder
@@ -11405,21 +11405,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.b
-      value: 0.7372549
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.g
-      value: 0.7529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.r
-      value: 0.3647059
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
@@ -14421,21 +14406,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.b
-      value: 0.44313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.g
-      value: 0.10980392
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.r
-      value: 0.8509804
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
 --- !u!4 &1176733967 stripped
@@ -15684,11 +15654,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaintBall (107)
       objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468264, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2198898715158468268, guid: 54c9e54b20a716c4481de9c5c8ec8580,
         type: 3}
       propertyPath: m_RootOrder
@@ -15743,21 +15708,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.b
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.g
-      value: 0.06666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.r
-      value: 0.84705883
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
@@ -18090,7 +18040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545845603}
   m_LocalRotation: {x: -0, y: -0.70900756, z: -0, w: 0.70520097}
-  m_LocalPosition: {x: 9.694, y: 1.79, z: 2.098}
+  m_LocalPosition: {x: 9, y: 0.868, z: 1.686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22185,21 +22135,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.b
-      value: 0.7490196
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.g
-      value: 0.59607846
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.r
-      value: 0.8901961
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
 --- !u!4 &2022131598 stripped
@@ -22994,11 +22929,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaintBall (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468264, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2198898715158468268, guid: 54c9e54b20a716c4481de9c5c8ec8580,
         type: 3}
       propertyPath: m_RootOrder
@@ -23053,21 +22983,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.b
-      value: 0.35686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.g
-      value: 0.78039217
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
-        type: 3}
-      propertyPath: color.r
-      value: 0.78039217
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
@@ -23325,6 +23240,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468305, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: shape
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468305, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 8125cf028780b1745a79880b9ba6a989, type: 3}
     - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
         type: 3}
       propertyPath: color.b
