@@ -8369,7 +8369,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 20.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -8378,7 +8378,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -17289,15 +17289,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545845603}
-  m_LocalRotation: {x: -0, y: -0.70900756, z: -0, w: 0.70520097}
-  m_LocalPosition: {x: 7, y: 0.868, z: 1.9}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.4, y: 0.868, z: 1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1228652096}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -90.308, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1545845607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21385,6 +21385,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: color.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
 --- !u!4 &2022131598 stripped
@@ -22233,6 +22248,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: color.b
+      value: 0.19277322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: color.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198898715158468306, guid: 54c9e54b20a716c4481de9c5c8ec8580,
+        type: 3}
+      propertyPath: color.r
+      value: 0.21820173
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c9e54b20a716c4481de9c5c8ec8580, type: 3}
